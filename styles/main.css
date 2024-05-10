@@ -97,6 +97,9 @@ body {
         margin-top: 4rem;
     }
 
+    .card__title{
+        font-size: 3rem;
+    }
     .card__list {
         display: flex;
         flex-direction: column;
