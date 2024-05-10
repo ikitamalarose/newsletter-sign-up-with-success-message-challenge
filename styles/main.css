@@ -1,0 +1,333 @@
+/* system design */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+
+    /* Colors */
+
+    /* Primary */
+
+    --Tomato: hsl(4, 100%, 67%);
+    /* Neutral */
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+
+    --body-font-family: "Roboto", sans-serif;
+    --body-font-size: 1rem;
+    --body-font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    background-color: var(--Dark-Slate-Grey);
+
+    display: grid;
+    place-content: center;
+}
+
+/* attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Tomato);
+}
+
+/* media query */
+
+/* desktop */
+@media (min-width:769px) {
+    body {
+        height: 100vh;
+    }
+
+    /* Sign-up form start  */
+    .card-sign-up {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 1fr;
+        place-content: center;
+        gap: 4rem;
+
+        width: 58rem;
+        height: 36rem;
+        background-color: var(--White);
+        border-radius: 2.25rem;
+    }
+
+    .card__picture {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card__picture img {
+        width: 25rem;
+        height: 34rem;
+    }
+
+    .card__content {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 23.5rem;
+        height: 27.875rem;
+        margin-top: 4rem;
+    }
+
+    .card__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.625rem;
+    }
+
+    .list img {
+        width: 1.313rem;
+        height: 1.313rem;
+        margin-right: 1rem;
+    }
+
+    .card__form {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form__group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form__group label {
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.813rem;
+        font-weight: 500;
+    }
+
+    .form__group #error-email{
+        color: var(--Tomato);
+        visibility: hidden;
+    }
+
+    .form__group input {
+        height: 3.5rem;
+        border: 0.063rem solid var(--Dark-Slate-Grey);
+        border-radius: 0.5rem;
+        outline: none;
+        margin-bottom: 1.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .invalid-input {
+        background-color: rgba(255, 97, 85, 0.15);
+        color: var(--Tomato);
+        border-color: var(--Tomato) !important;
+      }
+
+    .form__group input:hover{
+        cursor: pointer;
+    }
+
+    .form__btnSubmit,
+    .card__btnDismissMessage {
+        height: 3.5rem;
+        background-color: var(--Dark-Slate-Grey);
+        color: var(--White);
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
+        font-weight: 700;
+
+        transition: box-shadow 0.3s ease;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: var(--Tomato);
+        color: var(--White);
+       box-shadow: 0 5px 10px 0 rgba(255, 106, 58, 0.7), 0 5px 20px 0 rgba(255, 82, 123, 0.7); /* Box shadow gradient avec décalage vers le bas */
+    }
+
+    /* Sign-up form end  */
+
+    /* Success message start */
+    .card-success-message {
+        width: 31.5rem;
+        height: 32.5rem;
+        display: none;
+        flex-direction: column;
+        background-color: var(--White);
+        border-radius: 2.813rem;
+        padding: 3rem 4rem 4rem 4rem;
+    }
+
+    .card__successIcon {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .card__successMessage {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card__successDescriptionMessage {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Success message end */
+}
+
+/* mobile */
+@media (max-width:768px) {
+
+    /* Sign-up form start  */
+
+    .card-sign-up {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        background-color: var(--White);
+    }
+
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem 2.5rem 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .card__title {
+        margin-bottom: 1.5rem;
+    }
+
+    .card__list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+    }
+
+    .list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.625rem;
+    }
+
+    .list img {
+        width: 1.313rem;
+        height: 1.313rem;
+        margin-right: 1rem;
+    }
+
+    .card__form {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form__group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form__group label {
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 0.813rem;
+        font-weight: 500;
+    }
+
+    .form__group #error-email{
+        color: var(--Tomato);
+        visibility: hidden;
+    }
+
+    .form__group input {
+        height: 3.5rem;
+        border: 0.063rem solid var(--Dark-Slate-Grey);
+        border-radius: 0.5rem;
+        outline: none;
+        margin-bottom: 1.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .invalid-input {
+        background-color: rgba(255, 97, 85, 0.15);
+        color: var(--Tomato);
+        border-color: var(--Tomato) !important;
+      }
+
+    .form__btnSubmit,
+    .card__btnDismissMessage {
+        height: 3.5rem;
+        background-color: var(--Dark-Slate-Grey);
+        color: var(--White);
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
+    }
+
+    /* Sign-up form end  */
+
+    /* Success message start */
+
+    .card-success-message {
+        display: none;
+        flex-direction: column;
+        background-color: var(--White);
+        padding: 9.313rem 1.5rem 2.5rem 1.5rem;
+    }
+
+    .card__successIcon {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .card__successMessage {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .card__successDescriptionMessage {
+        margin-bottom: 22.438rem;
+    }
+
+    /* Success message end */
+}
