@@ -139,6 +139,9 @@ body {
         outline: none;
         margin-bottom: 1.5rem;
         padding: 1rem 1.5rem;
+
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
     }
 
     .invalid-input {
