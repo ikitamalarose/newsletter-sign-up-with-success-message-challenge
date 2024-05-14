@@ -68,13 +68,6 @@ body {
         background-color: var(--White);
     }
 
-    /* .card-sign-up {
-        display: flex;
-        flex-direction: column;
-        width: min-content;
-        background-color: var(--White);
-    } */
-
     .card__picture {
         display: flex;
         flex-direction: row;
@@ -169,7 +162,7 @@ body {
     /* Success message start */
 
     .card-success-message {
-        display: flex;
+        display: none;
         flex-direction: column;
         background-color: var(--White);
         padding: 9.313rem 1.5rem 2.5rem 1.5rem;
