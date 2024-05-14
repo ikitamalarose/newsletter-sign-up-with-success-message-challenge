@@ -67,6 +67,17 @@ form.addEventListener("submit", (e) => {
 - ### Purpose: 
   This JavaScript code snippet adds an event listener to the form's submit event. When the form is submitted, the event listener prevents the default form submission behavior (e.preventDefault()). Instead, it gathers form data using FormData and logs it to the console. This approach allows you to handle form submissions with custom validation and processing logic in JavaScript.
 
+```css
+input[type="email"] {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+```
+
+- ### Purpose: 
+  This CSS code snippet is designed to enhance the user experience on mobile devices by preventing unwanted zooming behavior when users interact with the email input field. 
+
+
 ## Author
 
 - Frontend Mentor - [@ikitamalarose](https://www.frontendmentor.io/profile/ikitamalarose)
